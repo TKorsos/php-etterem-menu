@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog</title>
+    <title><?php echo $this->receptek()[1][$_GET["id"]] ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
@@ -12,18 +12,13 @@
     <main class="container-lg">
       <section class="row">
         <article class="col">
-          <h1>Blog</h1>
+          <h1><?php echo $this->receptek()[1][$_GET["id"]] ?></h1>
           <div>
             <?php
 
-            foreach($this->receptek()[0] as $beturend)  {
-              echo '<div>'.ucfirst($beturend).'</div>';
-              foreach($this->receptek()[1] as $key => $recept) {
-                if(lcfirst($recept[0]) == $beturend) {
-                  echo '<li><a href="?page=receptekView&id='.$key.'">'.$recept.'</a></li>';
-                }
-              }
-            }
+            echo '<div>
+                    <img src="./assets/imgs/receptek/'.$_GET["id"][0].'/' . $_GET["id"] . '.png" alt="' . $this->receptek()[1][$_GET["id"]] . '" width="100%">
+                  </div>';
             
             ?>
           </div>

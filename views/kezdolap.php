@@ -12,7 +12,7 @@
   <?php include("nav.php") ?>
 
   <main class="container-lg py-5">
-    <section class="row">
+    <section class="row gap-5 gap-sm-0">
       <?php include("./views/hetek/hetimenu.php") ?>
       <?php include("./views/napok/napimenu.php") ?>
     </section>

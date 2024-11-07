@@ -1,7 +1,7 @@
 <?php
 
 echo '
-    <article class="col-5">
+    <article class="col-sm-5 d-flex flex-column gap-3 order-1 order-sm-0">
         <h2>'.$this->adatok()[3].'. hét akciói</h2>
         <div>
             <ul class="list-group rounded-0">';

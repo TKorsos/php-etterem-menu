@@ -1,10 +1,10 @@
 <?php
 
 echo '      
-    <article class="col-7 d-flex flex-column gap-3">
+    <article class="col-sm-7 d-flex flex-column gap-3 order-0 order-sm-1">
         <h2>' . $this->adatok()[0] . 'i akcióink</h2>
         <div>
-            <img src="./assets/imgs/' . $this->adatok()[1] . '.jpg" alt="' . $this->adatok()[2] . '" width="100%">
+            <img src="./assets/imgs/akciok/' . $this->adatok()[1] . '.jpg" alt="' . $this->adatok()[2] . '" width="100%">
         </div>
         <h3>Reggeli</h3>
         <div>
