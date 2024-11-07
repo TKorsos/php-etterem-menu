@@ -60,4 +60,16 @@ class UserController {
 
         return [$beturend, $receptek_arr];
     }
+
+    function receptSeged() {
+        $hozzavalok = file_get_contents('./views/receptek/'.$_GET["id"][0].'/'. $_GET["id"] .'_h.txt');
+
+        $hozzavalok_arr = explode(",", $hozzavalok, -1);
+
+        $elkeszites = file_get_contents('./views/receptek/'.$_GET["id"][0].'/'. $_GET["id"] .'_e.txt');
+                
+        $elkeszites_arr = explode(".", $elkeszites, -1);
+
+        return [$hozzavalok_arr, $elkeszites_arr];
+    }
 }
