@@ -9,12 +9,15 @@
   </head>
   <body>
     <?php include("nav.php") ?>
-    
     <main class="container-lg py-5">
-      <section class="row">
-        <article class="col d-flex flex-column gap-3">
+      <section class="row pb-5">
+        <article class="col text-center pb-5">
+          <h1><?php echo $this->receptek()[1][$_GET["id"]] ?></h1>
+        </article>
+      </section>
+      <section class="row g-3 g-xl-4 g-xxl-5">
+        <article class="col-md-6 d-flex flex-column gap-3">
           <div>
-            <h1><?php echo $this->receptek()[1][$_GET["id"]] ?></h1>
             <?php
 
             echo '<div>
@@ -23,6 +26,8 @@
             
             ?>
           </div>
+        </article>
+        <article class="col-md-6 d-flex flex-column gap-3">
           <div>
             <h3>Hozzávalók:</h3>
             <div>
@@ -30,7 +35,7 @@
                 <?php
 
                   foreach($this->receptSeged()[0] as $key => $hozzavalo) {
-                    echo '<li class="list-group-item border-0">'.$hozzavalo.'</li>';
+                    echo '<li class="list-group-item border-0 ps-0">'.$hozzavalo.'</li>';
                   }
                 
                 ?>
@@ -44,7 +49,7 @@
                 <?php
 
                 foreach($this->receptSeged()[1] as $key => $elkeszites) {
-                  echo '<li class="list-group-item border-0">'.$elkeszites.'.</li>';
+                  echo '<li class="list-group-item border-0 ps-0">'.$elkeszites.'.</li>';
                 }
                 
                 ?>
