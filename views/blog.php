@@ -11,24 +11,38 @@
     <?php include("nav.php") ?>
     
     <main class="container-lg py-5">
-      <section class="row justify-content-center">
-        <article class="col-auto">
-          <h1>Blog</h1>
-          <div>
-            <?php
-
-            foreach($this->receptek()[0] as $beturend)  {
-              echo '<div>'.ucfirst($beturend).'</div>';
-              foreach($this->receptek()[1] as $key => $recept) {
-                if(lcfirst($recept[0]) == $beturend) {
-                  echo '<li><a href="?page=receptekView&id='.$key.'">'.$recept.'</a></li>';
-                }
-              }
-            }
-            
-            ?>
-          </div>
-        </article>
+      <section class="row justify-content-center text-center pb-5">
+          <article class="col pb-5">
+            <h1>Blog</h1>
+          </article>
+      </section>
+      <section class="row row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 justify-content-center justify-content-sm-start">
+        <?php
+          foreach($this->receptek()[0] as $beturend)  {
+            echo '<article class="col-7 col-sm">
+                    <div>'.ucfirst($beturend).'</div>';
+                    foreach($this->receptek()[1] as $key => $recept) {
+                      $filename = './assets/imgs/receptek/'.$beturend.'/' . $key . '.png';
+                      if(lcfirst($recept[0]) == $beturend && file_exists($filename)) {
+                        echo '
+                        <a href="?page=receptekView&id='.$key.'">
+                          <div class="card text-bg-dark border-0">
+                            <img src="./assets/imgs/receptek/'.$beturend.'/' . $key . '.png" class="card-img" alt="' . $recept . '">
+                            <div class="card-img-overlay text-center p-0">
+                              <h5 class="card-title">
+                                <div class="text-light p-2 rounded-top-2 card-opacity">
+                                  '.$recept.'
+                                </div>
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                        ';
+                      }
+                    }
+            echo '</article>';
+          }
+        ?>
       </section>
     </main>
 
