@@ -1,4 +1,14 @@
+:root {
+    --card-opacity-clr: hsla(0, 0%, 0%, .5)!important;
+    --log-w: 60px!important;
+    --log-h: 60px!important;
+}
+
 .logo {
-    width: 60px;
-    height: 60px;
+    width: var(--log-w);
+    height: var(--log-h);
+}
+
+.card-opacity {
+    background-color: var(--card-opacity-clr);
 }

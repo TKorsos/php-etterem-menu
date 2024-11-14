@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand">
       <img src="./assets/imgs/logo/etterem_logo_02.png" alt="étterem logója" class="logo">
