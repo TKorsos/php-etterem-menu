@@ -17,5 +17,3 @@ else {
     $getpage = $_GET["page"];
     $page->$getpage();
 }
-
-// unset
