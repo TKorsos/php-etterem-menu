@@ -33,11 +33,16 @@
             <div>
               <ul class="list-group">
                 <?php
-
-                  foreach($this->receptSeged()[0] as $key => $hozzavalo) {
-                    echo '<li class="list-group-item border-0 ps-0">'.$hozzavalo.'</li>';
-                  }
                 
+                  foreach($this->receptSeged()[0] as $key => $hozzavalo) {
+                    if($hozzavalo[-1] != ":") {
+                      echo '<li class="list-group-item border-0 ps-0">'.$hozzavalo.'</li>';
+                    }
+                    else {
+                      echo '<li class="list-group-item border-0 ps-0 fw-bold">'.$hozzavalo.'</li>';
+                    }
+                  }
+
                 ?>
               </ul>
             </div>
