@@ -9,11 +9,8 @@ echo '
         <h3>Reggeli</h3>
         <div>
             <ul class="list-group rounded-0">';
-                echo '<li class="list-group-item">
-                    <div>';
-                    // echo $this->menu()[0][($this->adatok()[1] == 0 ? ($this->adatok()[1] + 6) : ($this->adatok()[1] - 1) )];
-                    echo '</div>
-                    <div>'.$this->menu()[0][0].'</div>
+           echo '<li class="list-group-item">
+                    <div>'.$this->menu()[0][($this->adatok()[1] == 0 ? ($this->adatok()[1] + 6) : ($this->adatok()[1] - 1) )].'</div>
                 </li>';
         echo '</ul>
         </div>

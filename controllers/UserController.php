@@ -42,7 +42,7 @@ class UserController {
         // napok magyar
         $days_arr = ["Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat", "Vasárnap"];
         // reggeli
-        $reggeli = ["Almás fahéjas zabkása chia maggal"];
+        $reggeli = ["Almás fahéjas zabkása chia maggal", "Amerikai zabpalacsinta", "Bajnokok reggelije", "Croque madame", "Tofurántotta", "Fetás-paradicsomos tarte", "Tejbegríz"];
         // levesek
         $ebed_a = ["Fokhagymakrémleves", "Jókai bableves", "Sertésraguleves", "Paradicsomleves", "Csontleves", "Tárkonyos zöldségleves", "Májgombócleves"];
         // főételek
@@ -56,7 +56,7 @@ class UserController {
     function receptek() {
         $beturend = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-        $receptek_arr = ["almas_fahejas_zabkasa_chia_maggal" => "Almás fahéjas zabkása chia maggal", "fokhagymakremleves" => "Fokhagymakrémleves", "jokai_bableves" => "Jókai bableves", "sertesraguleves" => "Sertésraguleves", "paradicsomleves" => "Paradicsomleves", "csontleves" => "Csontleves", "tarkonyos_zoldsegleves" => "Tárkonyos zöldségleves", "majgombocleves" => "Májgombócleves", "zoldborsofozelek_sult_debrecenivel" => "Zöldborsófőzelék, sült debrecenivel", "roston_harcsa_sajtmartassal_zoldseges_bulgurral" => "Roston harcsa sajtmártással, zöldséges bulgurral", "milanoi_sertesszelet" => "Milánói sertésszelet", "pacalporkolt_fott_burgonyaval" => "Pacalpörkölt, főtt burgonyával", "tanyasi_sertesszelet_kukoricas_rizzsel" => "Tanyasi sertésszelet, kukoricás rizzsel", "aranygaluska_vanilia_sodoval" => "Aranygaluska, vanília sodóval", "kaposztas_cvekedli" => "Káposztás cvekedli", "paradicsomos_tonhalas_teszta" => "Paradicsomos-tonhalas tészta"];
+        $receptek_arr = ["almas_fahejas_zabkasa_chia_maggal" => "Almás fahéjas zabkása chia maggal", "fokhagymakremleves" => "Fokhagymakrémleves", "jokai_bableves" => "Jókai bableves", "sertesraguleves" => "Sertésraguleves", "paradicsomleves" => "Paradicsomleves", "csontleves" => "Csontleves", "tarkonyos_zoldsegleves" => "Tárkonyos zöldségleves", "majgombocleves" => "Májgombócleves", "zoldborsofozelek_sult_debrecenivel" => "Zöldborsófőzelék, sült debrecenivel", "roston_harcsa_sajtmartassal_zoldseges_bulgurral" => "Roston harcsa sajtmártással, zöldséges bulgurral", "milanoi_sertesszelet" => "Milánói sertésszelet", "pacalporkolt_fott_burgonyaval" => "Pacalpörkölt, főtt burgonyával", "tanyasi_sertesszelet_kukoricas_rizzsel" => "Tanyasi sertésszelet, kukoricás rizzsel", "aranygaluska_vanilia_sodoval" => "Aranygaluska, vanília sodóval", "kaposztas_cvekedli" => "Káposztás cvekedli", "paradicsomos_tonhalas_teszta" => "Paradicsomos-tonhalas tészta", "amerikai_zabpalacsinta" => "Amerikai zabpalacsinta", "bajnokok_reggelije" => "Bajnokok reggelije", "croque_madame" => "Croque madame", "tofurantotta" => "Tofurántotta", "fetas_paradicsomos_tarte" => "Fetás-paradicsomos tarte", "tejbegriz" => "Tejbegríz"];
 
         return [$beturend, $receptek_arr];
     }

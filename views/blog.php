@@ -19,7 +19,7 @@
       <section class="row row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 justify-content-center justify-content-sm-start">
         <?php
           foreach($this->receptek()[0] as $beturend)  {
-            echo '<article class="col-7 col-sm">
+            echo '<article class="col-7 col-sm d-flex flex-column pb-3 gap-3">
                     <div>'.ucfirst($beturend).'</div>';
                     foreach($this->receptek()[1] as $key => $recept) {
                       $filename = './assets/imgs/receptek/'.$beturend.'/' . $key . '.png';
@@ -38,6 +38,10 @@
                           </div>
                         </a>
                         ';
+                      }
+                      else if (lcfirst($recept[0]) == $beturend && !file_exists($filename)) {
+                        // else if ág a képpel nem rendelkező ételek láthatósága miatt
+                        echo '<div>'.$recept.'</div>';
                       }
                     }
             echo '</article>';
